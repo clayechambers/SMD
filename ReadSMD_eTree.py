@@ -2,14 +2,13 @@ import xml.etree.ElementTree as ET
 import time
 
 def xmlSMD2ListofDictionaries(filename):
-
     
     with open(filename,'rt') as f:
         tree = ET.parse(f)
 
     root = tree.getroot()
 
-    table = []  # Create a list to act as a table that will contain dict objects as rows.
+    table = []  # Create a list to act as a table that will contain dictionary objects as rows.
 
     for cat in root.iter('Category'):
 
@@ -290,6 +289,7 @@ def xmlSMD2ListofDictionaries(filename):
             table.append(rowDict)
 
     return table
+
     
 table = xmlSMD2ListofDictionaries(r'SMD\data\smd.xml')
 
