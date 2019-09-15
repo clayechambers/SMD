@@ -8,7 +8,7 @@ with open(r'data\smd.xml','rt') as f:
 
 root = tree.getroot()
 
-table = []  # Create a list to act as a table that will contain a dict objects as rows.
+table = []  # Create a list to act as a table that will contain dict objects as rows.
 
 for cat in root.iter('Category'):
     
